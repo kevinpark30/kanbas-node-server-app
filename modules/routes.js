@@ -13,7 +13,7 @@ function ModuleRoutes(app) {
     app.delete("/api/modules/:mid", (req, res) => {
         const { mid } = req.params;
         db.modules = db.modules.filter((m) => m._id !== mid);
-        res.sendStatus(200);
+        res.sendStatus(204);
     });
 
     app.post("/api/courses/:cid/modules", (req, res) => {
